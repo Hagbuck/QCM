@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./front/style/default.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/creation.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/header.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/footer.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- JS  -->
+	<script type="text/javascript" src="./front/lib/jquery.js"></script>
+	<script type="text/javascript" src="./front/lib/sweetalert2.all.min.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/session.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/join_qcm.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/log_in_out.js"></script>
+
+	<title>QCM ~ Session</title>
+</head>
+<body>
+<% include front/header.html %>
+
+<!-- MAIN BODY -->
+<div id="main_div">
+	<form id="main_form">
+		<div class="form-group" id="question_form">
+			<label for="titre" id="label_titre"></label>
+			<input type="text" class="form-control" id="titre" placeholder="Titre du QCM..." required disabled/>
+			<div id="question_block">
+				<hr>
+			</div>
+			<div class="btn btn-info" id="nextQuestion" onclick="nextQuestion()"> Question suivante <i style="margin-left: 10px;" class="fas fa-arrow-circle-right"></i> </div> <!-- VUE PROF UNIQUEMENT -->
+
+		</div>
+	</form>
+</div>
+<% include front/footer.html %>
+</body>
+
+</html>
+<script>
+	//TODO : QCM obtenable par URL -> CTRL existance et accessibiltéé sinon msg erreur
+	$('input[type="text"]').attr("disabled","");
+	get_QCM("5ce3e7d3a25fbb167836817b");
+</script>

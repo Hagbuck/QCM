@@ -1,0 +1,78 @@
+//IMPORT
+@import "default.scss";
+
+//VARS
+$decalage : 15px;
+
+//RULES
+@mixin default_add_button{
+	margin-left: $decalage+5px;
+	font-size: 1.5em;
+	color:$main-color;
+	cursor:pointer;
+}
+
+@mixin default_delete_button{
+	margin-left: $decalage;
+	font-size: 1.25em;
+	color:#B82D2D;
+	cursor:pointer;
+}
+
+#main_form{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 55px;
+}
+
+
+
+.largeBox::before,
+.largeBox::after {
+    top: .8rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+#question_form{
+
+	margin-top:50px;
+	margin-left: 10px;
+
+	#label_question{margin-right: $decalage;}
+
+	.question_intitule{width:500px;}
+	.text_reponse{width:400px;}
+
+	.reponse_block{
+		margin-left:50px;
+		.reponse{
+			margin-top: $decalage;
+			.custom-switch{margin-left: $decalage;}
+			i{@include default_delete_button;};
+		}
+	}
+
+	.add_module_response i{@include default_add_button;}
+	.add_module_question i{@include default_add_button;font-size: 1.5em;}
+	.remove_module_question i{@include default_delete_button;font-size: 1.5em;/*display: none;*/}
+
+	#footer_form
+	{
+		display: flex;
+		*{margin:auto 0 auto 0;}
+
+		#submit_button{
+			background-color:$main-color-green;
+			margin-left: 15px;
+			font-weight: bold;
+			transition: 0.3s;
+
+			&:hover{
+				background-color: $main-color;
+				transition: 0.3s;
+			}
+		}
+	}
+
+}

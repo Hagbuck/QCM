@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url("../fonts/Comfortaa-Regular.ttf");
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url("../fonts/Comfortaa-Bold.ttf");
+  font-weight: bold;
+}
+
+* {
+  font-family: Comfortaa;
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #CCCCCC;
+}
+
+#main_div {
+  padding: 70px 20px 0px 20px;
+  min-height: 100%;
+  margin: -50px auto -50px;
+}
+
+h1 {
+  color: #bf0001;
+  font-size: 30px;
+  font-weight: 300;
+  font-variant: small-caps;
+}
+
+h2 {
+  color: orange;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#main_form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+
+.largeBox::before,
+.largeBox::after {
+  top: .8rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+#question_form {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+#question_form #label_question {
+  margin-right: 15px;
+}
+
+#question_form .question_intitule {
+  width: 500px;
+}
+
+#question_form .text_reponse {
+  width: 400px;
+}
+
+#question_form .reponse_block {
+  margin-left: 50px;
+}
+
+#question_form .reponse_block .reponse {
+  margin-top: 15px;
+}
+
+#question_form .reponse_block .reponse .custom-switch {
+  margin-left: 15px;
+}
+
+#question_form .reponse_block .reponse i {
+  margin-left: 15px;
+  font-size: 1.25em;
+  color: #B82D2D;
+  cursor: pointer;
+}
+
+#question_form .add_module_response i {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: #D96200;
+  cursor: pointer;
+}
+
+#question_form .add_module_question i {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: #D96200;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+#question_form .remove_module_question i {
+  margin-left: 15px;
+  font-size: 1.25em;
+  color: #B82D2D;
+  cursor: pointer;
+  font-size: 1.5em;
+  /*display: none;*/
+}
+
+#question_form #footer_form {
+  display: flex;
+}
+
+#question_form #footer_form * {
+  margin: auto 0 auto 0;
+}
+
+#question_form #footer_form #submit_button {
+  background-color: #91A437;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#question_form #footer_form #submit_button:hover {
+  background-color: #D96200;
+  transition: 0.3s;
+}

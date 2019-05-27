@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./front/style/default.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/index.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/header.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/footer.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- JS  -->
+	<script type="text/javascript" src="./front/lib/jquery.js"></script>
+	<script type="text/javascript" src="./front/lib/sweetalert2.all.min.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/join_qcm.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/log_in_out.js"></script>
+	<script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+	<!-- OTHER -->
+	<title>QCM ~ Home</title>
+</head>
+<body>
+	<% include front/header.html %>
+
+	<div id="main_div">
+		<h1>Quinoa Concombre Mangue</h1>
+		<div class="title_trait"></div>
+
+		<div id="descComponent">
+
+			<div clas="blockFlex">
+				<h2>Qu'est ce que c'est ?</h2>
+				<div>Quinoa Concombre Mangue est une application de pédagogie numérique
+					permettant aux enseignants de gérer des QCM de manière intéractive.
+				</div>
+			</div>
+
+			<div clas="blockFlex">
+			<h2>Enseignant ?  </h2>
+				<div>
+					<span class="quickLink" onclick="displayIHMConnexion()">
+						<i class="fas fa-sign-in-alt"></i> Connecte-toi
+					</span>
+					et accède à tes QCM !
+				</div>
+			</div>
+
+			<div clas="blockFlex">
+				<h2>Elève ?</h2>
+				<div>
+					<span class="quickLink" onclick="displayIHMJoin()">
+						<i class="fas fa-door-open"></i>
+						Renseigne ton email et l'identifiant
+					</span>
+					fourni par ton enseignant et que le QCM commence !
+				</div>
+			</div>
+		</div>
+	</div>
+	<% include front/footer.html %>
+</body>
+</html>

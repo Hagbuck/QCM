@@ -1,0 +1,30 @@
+<html>
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./front/style/default.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/profil.css">
+	<!-- JS  -->
+	<script type="text/javascript" src="./front/lib/jquery.js"></script>
+	<!-- OTHER -->
+	<link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+	<title>QCM ~ Accueil</title>
+</head>
+<body>
+	<% include front/header.html %>
+	<div id="main_div">
+		<div id="addQCM"> <a href="creation">
+			<button class="btn btn-info">
+				Ajouter un QCM
+				<i style="margin-left:15px;" class="fas fa-plus-square">
+			</i> </button>
+		</a> </div>
+		<div id="qcm_tab"></div>
+	</div>
+	<% include front/footer.html %>
+</body>
+
+</html>
+<script type="text/javascript" src="./front/js_scripts/profil.js"></script>

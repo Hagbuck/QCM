@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./front/style/default.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/creation.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/header.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/footer.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- JS  -->
+	<script type="text/javascript" src="./front/lib/jquery.js"></script>
+	<script type="text/javascript" src="./front/lib/sweetalert2.all.min.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/log_in_out.js"></script>
+	<script type="text/javascript" src="./front/js_scripts/join_qcm.js"></script>
+	<!-- OTHER -->
+	<title>QCM ~ Création</title>
+</head>
+
+<body>
+<% include front/header.html %>
+
+<!-- MAIN BODY -->
+<div id="main_div">
+
+<form id="main_form">
+	<div class="form-group" id="question_form">
+		<label for="titre" id="label_titre"></label>
+		<input type="text" class="form-control" id="titre" placeholder="Titre du QCM..." required/>
+		<hr>
+		<!-- QUESTION 1 -->
+		<div id="question_block">
+			<div id="q1" class="questionIndiv">
+				<div class="form-inline">
+					<label for="question_intitule" id="label_question"> Question : </label>
+					<input type="text" class="form-control question_intitule" required/>
+						<!-- ACTIONS -->
+					<div class="add_module_response"> <i class="fas fa-plus-circle" onclick="add_response('1');"></i>  </div>
+					<div class="remove_module_question"> <i class="fas fa-trash-alt" onclick="delete_question('1');"></i> </div>
+				</div>
+				<div class="reponse_block" id="q1r">
+					<!-- Q1QR1 -->
+					<div class="form-inline reponse" id="q1r1">
+						<input type="text" class="form-control text_reponse"  placeholder="Un choix..." required/>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="customSwitch1_1">
+							<label class="custom-control-label" for="customSwitch1_1"></label>
+						</div>
+						<div class="remove_module_response"> <i class="fas fa-trash-alt" onclick="delete_option('1','1');"></i> </div>
+					</div>
+					<!-- Q1QR2 -->
+					<div class="form-inline reponse" id="q1r2">
+						<input type="text" class="form-control text_reponse" placeholder="Un choix..." required/>
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="customSwitch1_2">
+							<label class="custom-control-label" for="customSwitch1_2"></label>
+						</div>
+						<div class="remove_module_response"> <i class="fas fa-trash-alt" onclick="delete_option('1','2');"></i> </div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div id="footer_form">
+			<div class="add_module_question"> <i class="fas fa-plus-circle" onclick="add_question();"></i>  </div>
+			<!-- <button id="submit_button" type="submit" class="btn" onclick="sendQCM()">Valider</button> -->
+			<span id="submit_button" class="btn btn-primary" style="margin-left:10px;" onclick="sendQCM()"> Valider </span>
+		</div>
+
+	</div>
+</form></div>
+
+<% include front/footer.html %>
+</body>
+
+</html>
+
+<script type="text/javascript" src="./front/js_scripts/creation.js"></script>
+<script>
+	checkQuestionIsDeletable();
+	checkOptionIsDeletable(count_question);
+</script>

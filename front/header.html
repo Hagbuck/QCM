@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="/front/style/default.css">
+<link rel="stylesheet" type="text/css" href="/front/style/header.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<script type="text/javascript" src="./front/lib/jquery.js"></script>
+<script type="text/javascript" src="./front/js_scripts/log_in_out.js"></script>
+<script type="text/javascript" src="./front/lib/sweetalert2.all.min.js"></script>
+
+<header>
+	<nav id="menu">
+		<ul id="index">
+			<a href="index"><li><i class="fas fa-home"></i></li></a><a href="profil"><li id="profilLi"><i class="fas fa-user-alt"></i> <span id="userMail"></span> </li></a>
+		</ul>
+		<ul id="rightNavBar">
+			<a href="#" onclick="displayIHMJoin()"><li style="border-right:2px solid orange;border-left:2px solid orange">
+				<i class="fas fa-door-open"></i>
+				Rejoindre un QCM
+			</li></a>
+			<a href='#' onclick="displayIHMConnexion()" id="loginlogout"><li>
+				<i class="fas fa-sign-in-alt"></i>
+				Connexion
+			</li></a>
+		</ul>
+	</nav>
+</header>
+
+<script>checkSession();</script>

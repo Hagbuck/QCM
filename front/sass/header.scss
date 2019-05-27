@@ -1,0 +1,73 @@
+//IMPORT
+@import "default.scss";
+
+@mixin animation_menu{
+	background-color:orange;
+	color:#333333;
+	transition:0.7s;
+}
+
+nav{
+	background-image: linear-gradient(to right, #333333, #6B6A6A);
+	height: 50px;
+	border-bottom: 0.2em solid orange;
+}
+
+section{ position:relative;}
+
+#menu{
+	display: flex;
+	justify-content: space-between;
+	background-image: linear-gradient(to right, #333333, #6B6A6A);
+	font-size: 18px;
+
+	ul{
+		height:50px;
+		margin-top:0px;
+
+		a:hover{text-decoration: none;}
+
+		li{
+			height: auto;
+			display: inline-block;
+			width: 6em;
+			list-style-type: none;
+
+			color: white;
+			text-align: center;
+			transition:0.7s;
+
+			height:50px;
+			margin:auto;
+			padding-top:10px;
+
+			&:hover{@include animation_menu;}
+		}
+
+		#profilLi{
+			display: none;
+			width: auto;
+			padding-left:15px;padding-right: 15px;
+			cursor: pointer;
+
+			i{margin-right:15px;}
+		}
+
+	}
+}
+
+
+#rightNavBar{
+	min-width: 30%;
+	display: flex;
+	justify-content: flex-end;
+
+	li:first-child{min-width: 300px;}
+	i{margin-right: 15px;}
+}
+
+
+#index li{
+	border-right:2px solid orange;
+	margin:0px;
+}

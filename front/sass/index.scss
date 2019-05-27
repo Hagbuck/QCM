@@ -1,0 +1,42 @@
+//IMPORT
+@import "default.scss";
+
+.title_trait{
+	border-bottom: 2px dashed orange;
+	width: 600px;
+}
+
+#descComponent{
+	margin-top:25px;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: $main-color-darkgray;
+	display: flex;
+
+	justify-content: space-around;
+	align-items: stretch;
+
+	div{
+		margin-left: 20px;
+		font-size: 16px;
+		margin:20px;
+		flex-grow: 1;
+		flex-basis: 100px;
+
+		&:not(:last-child){border-right: 1px dashed orange;}
+	}
+
+	h2::before{
+		content:'> ';
+		color: orange;
+		font-size: 35px;
+		font-weight: 300;
+	}
+}
+
+.quickLink{
+	color:#bf0001;
+	transition: 0.4s;
+	cursor: pointer;
+	&:hover{color:orange;transition: 0.4s;}
+}

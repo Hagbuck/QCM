@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "default.css",
+	"sources": [
+		"../sass/default.scss"
+	],
+	"sourcesContent": [
+		"$main-color : #D96200;\n$main-color-green : #91A437;\n"
+	],
+	"names": [],
+	"mappings": ""
+}

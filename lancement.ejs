@@ -1,0 +1,76 @@
+<html>
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8"/>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./front/style/default.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/lancement.css">
+	<link rel="stylesheet" type="text/css" href="./front/style/creation.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+	<!-- JS  -->
+	<script type="text/javascript" src="./front/lib/jquery.js"></script>
+	<script type="text/javascript" src="./front/lib/sweetalert2.all.min.js"></script>
+	<script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<!-- OTHER -->
+	<link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+	<title>QCM ~ Lancement</title>
+</head>
+
+<body>
+<% include front/header.html %>
+<div id="main_div">
+	<!-- WAIT COMPONENT-->
+	<div id="loadComponet">
+		<div id="boxTitle">
+			<div id="titleQCM">
+				<h1>Titre du QCM</h1>
+				<div class="title_trait"> </div>
+			</div>
+			<div id="participants">
+				<h2><span id="nbParicipants">0</span> participants</h2>
+				<!-- SEULEMENT POUR PROF -->
+				<button type="button" id="buttonCommencer" class="btn btn-info profContent" onclick="beginQCM()">
+					Commencer
+				</button>
+			</div>
+		</div>
+
+		<div id="waitingBlock">
+			<div id="loaderText">En attente de participants...</div>
+			<div id="loader"><i class="fas fa-spinner"></i></div>
+		</div>
+
+		<div id="participantsTab"></div>
+
+	</div>
+	<!-- END WAIT COMPOENT -->
+	<!-- QUESTION COMPONENT -->
+	<div id="main_form" style="display:none;">
+		<div class="form-group" id="question_form">
+			<label for="titre" id="label_titre"></label>
+			<input type="text" class="form-control" id="titre" placeholder="Titre du QCM..." required disabled/>
+			<div id="question_block">
+				<hr>
+			</div>
+			<div id="blockResults"></div>
+			<div class="btn btn-info profContent" id="correction" onclick="correction()"> Corriger <i style="margin-left: 10px;" class="fas fa-check-circle"></i> </div> <!-- VUE PROF UNIQUEMENT -->
+			<div class="btn btn-info profContent" id="nextQuestion" onclick="askNextQuestion()"> Question suivante <i style="margin-left: 10px;" class="fas fa-arrow-circle-right"></i> </div> <!-- VUE PROF UNIQUEMENT -->
+			<div class="btn btn-info eleveContent" id="valideReponse" onclick="submitReponse()"> Valider mes réponses <i style="margin-left: 10px;" class="fas fa-clipboard-check"></i></div> <!-- VUE ELEVE UNIQUEMENT -->
+		</div>
+	</div>
+	<!-- END QUESTION COMPONENT -->
+	<!-- SYNTEHSE COMPONENT -->
+	<div id="syntheseBlock" style="display:none;">
+		<h2> Fin du QCM </h2>
+		<canvas id="chartRes" width="400" height="100" ></canvas>
+		<h3> Votre résultat : <span id="scoreSpan"> 10 </span>
+	</div>
+	<!-- SYNTEHSE COMPONENT -->
+</div>
+<% include front/footer.html %>
+</body>
+</html>
+<script type="text/javascript" src="./front/js_scripts/lancement.js"></script>
+<script type="text/javascript" src="./front/js_scripts/session.js"></script>

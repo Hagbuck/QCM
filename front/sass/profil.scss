@@ -1,0 +1,20 @@
+//IMPORT
+@import "default.scss";
+
+.launchIcon{
+	font-size: 2em;
+	color:$main-color-darkgray;
+	transition: 0.5s;
+	&:hover{color:orange;transition: 0.5s;}
+}
+
+
+#qcm_tab{
+	max-width: 600px;
+	margin: auto;
+}
+
+#addQCM{
+	margin: 15px auto 15px auto;
+	text-align: center;
+}

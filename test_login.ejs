@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <% include front/header.html %>
+        <form action="/login" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="mail"/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" value="Log In"/>
+            </div>
+        </form>
+        <% include front/footer.html %>
+    </body>
+</html>
