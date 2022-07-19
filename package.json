@@ -27,7 +27,7 @@
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "mongodb": "^3.2.5",
-    "properties-reader": "0.0.16",
+    "properties-reader": "2.2.0",
     "socket.io": "^2.2.0"
   }
 }
